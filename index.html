@@ -6,10 +6,10 @@
         content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
   <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nerfies: Deformable Neural Radiance Fields</title>
+  <title>Leveraging Symmetry in RL-based Legged Locomotion Control</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
 
@@ -20,7 +20,7 @@
     gtag('js', new Date());
 
     gtag('config', 'G-PYVRSFMDRL');
-  </script>
+  </script> -->
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
@@ -39,10 +39,11 @@
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
 
-<nav class="navbar" role="navigation" aria-label="main navigation">
+<!-- <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
       <span aria-hidden="true"></span>
@@ -57,30 +58,9 @@
           <i class="fas fa-home"></i>
       </span>
       </a>
-
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          More Research
-        </a>
-        <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://hypernerf.github.io">
-            HyperNeRF
-          </a>
-          <a class="navbar-item" href="https://nerfies.github.io">
-            Nerfies
-          </a>
-          <a class="navbar-item" href="https://latentfusion.github.io">
-            LatentFusion
-          </a>
-          <a class="navbar-item" href="https://photoshape.github.io">
-            PhotoShape
-          </a>
-        </div>
-      </div>
     </div>
-
   </div>
-</nav>
+</nav> -->
 
 
 <section class="hero">
@@ -88,48 +68,54 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Nerfies: Deformable Neural Radiance Fields</h1>
+          <h1 class="title is-1 publication-title">Leveraging Symmetry in RL-based Legged Locomotion Control</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://keunhong.com">Keunhong Park</a><sup>1</sup>,</span>
+              <a href="">Zhi Su</a><sup>*, 2</sup>,</span>
             <span class="author-block">
-              <a href="https://utkarshsinha.com">Utkarsh Sinha</a><sup>2</sup>,</span>
+              <a href="">Xiaoyu Huang</a><sup>*, 1</sup>,</span>
             <span class="author-block">
-              <a href="https://jonbarron.info">Jonathan T. Barron</a><sup>2</sup>,
+              <a href="">Daniel Ordoñez-Apraez</a><sup>3</sup>,
             </span>
             <span class="author-block">
-              <a href="http://sofienbouaziz.com">Sofien Bouaziz</a><sup>2</sup>,
+              <a href="">Yunfei Li</a><sup>2</sup>,
             </span>
             <span class="author-block">
-              <a href="https://www.danbgoldman.com">Dan B Goldman</a><sup>2</sup>,
+              <a href="">Zhongyu Li</a><sup>1</sup>,
             </span>
             <span class="author-block">
-              <a href="https://homes.cs.washington.edu/~seitz/">Steven M. Seitz</a><sup>1,2</sup>,
+              <a href="">Qiayuan Liao</a><sup>1</sup>,
             </span>
             <span class="author-block">
-              <a href="http://www.ricardomartinbrualla.com">Ricardo Martin-Brualla</a><sup>2</sup>
+              <a href="">Giulio Turrisi</a><sup>3</sup>,
+            </span>
+            <span class="author-block"></span>
+              <a href="">Massimiliano Pontil</a><sup>3</sup>,
+            </span>
+            <span class="author-block"></span>
+              <a href="">Claudio Semini</a><sup>3</sup>,
+            </span>
+            <span class="author-block"></span>
+              <a href="">Yi Wu</a><sup>2, 4</sup>,
+            </span>
+            <span class="author-block"></span>
+              <a href="">Koushil Sreenath</a><sup>1</sup>
             </span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>University of Washington,</span>
-            <span class="author-block"><sup>2</sup>Google Research</span>
+            <div><span class="author-block"><sup>1</sup>UC Berkeley</span></div>
+            <div><span class="author-block"><sup>2</sup>Institute for Interdisciplinary Information Sciences, Tsinghua University</span></div>
+            <div><span class="author-block"><sup>3</sup>Istituto Italiano di Tecnologia, Italy</span></div>
+            <div><span class="author-block"><sup>4</sup>Shanghai Qi Zhi Institute</span></div>
+            <div><b>IROS 2024</b></div>
           </div>
 
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://arxiv.org/pdf/2011.12948"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
-                  </span>
-                  <span>Paper</span>
-                </a>
-              </span>
-              <span class="link-block">
-                <a href="https://arxiv.org/abs/2011.12948"
+                <a href="https://arxiv.org/abs/2403.17320"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -139,7 +125,7 @@
               </span>
               <!-- Video Link. -->
               <span class="link-block">
-                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                <a href="https://www.youtube.com/watch?v=Ad1clt4Yi4U"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-youtube"></i>
@@ -149,7 +135,7 @@
               </span>
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/google/nerfies"
+                <a href=""
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -157,15 +143,6 @@
                   <span>Code</span>
                   </a>
               </span>
-              <!-- Dataset Link. -->
-              <span class="link-block">
-                <a href="https://github.com/google/nerfies/releases/tag/0.1"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="far fa-images"></i>
-                  </span>
-                  <span>Data</span>
-                  </a>
             </div>
 
           </div>
@@ -175,7 +152,7 @@
   </div>
 </section>
 
-<section class="hero teaser">
+<!-- <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
       <video id="teaser" autoplay muted loop playsinline height="100%">
@@ -189,9 +166,9 @@
       </h2>
     </div>
   </div>
-</section>
+</section> -->
 
-
+<!-- 
 <section class="hero is-light is-small">
   <div class="hero-body">
     <div class="container">
@@ -247,7 +224,11 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
+
+<div style="text-align: center;">
+  <img src="./static/images/cover.png" alt="System Introduction" style="width: 50%;">
+</div>
 
 
 <section class="section">
@@ -255,34 +236,20 @@
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
+        <h2 class="title is-2">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
-          </p>
-          <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
-          </p>
-          <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
+            Model-free reinforcement learning is a promising approach for autonomously solving challenging robotics control problems, 
+            but faces exploration difficulty without information about the robot's morphology. 
+            The under-exploration of multiple modalities with symmetric states leads to behaviors that are often unnatural and sub-optimal. 
+            This issue becomes particularly pronounced in the context of robotic systems with morphological symmetries, 
+            such as legged robots for which the resulting asymmetric and aperiodic behaviors compromise performance, robustness, and transferability to real hardware. 
+            To mitigate this challenge, we can leverage symmetry to guide and improve the exploration in policy learning via equivariance / invariance constraints. 
+            We investigate the efficacy of two approaches to incorporate symmetry: modifying the network architectures to be strictly equivariant / invariant, 
+            and leveraging data augmentation to approximate equivariant / invariant actor-critics. 
+            We implement the methods on challenging loco-manipulation and bipedal locomotion tasks and compare with an unconstrained baseline. 
+            We find that the strictly equivariant policy consistently outperforms other methods in sample efficiency and task performance in simulation. 
+            Additionaly, symmetry-incorporated approaches exhibit better gait quality, higher robustness and can be deployed zero-shot to hardware.
           </p>
         </div>
       </div>
@@ -292,9 +259,9 @@
     <!-- Paper video. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
+        <h2 class="title is-2">Video</h2>
         <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
+          <iframe src="https://www.youtube.com/embed/Ad1clt4Yi4U"
                   frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
       </div>
@@ -305,138 +272,155 @@
 
 
 <section class="section">
-  <div class="container is-max-desktop">
-
-    <div class="columns is-centered">
-
-      <!-- Visual Effects. -->
-      <div class="column">
-        <div class="content">
-          <h2 class="title is-3">Visual Effects</h2>
-          <p>
-            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
-            would be impossible without nerfies since it would require going through a wall.
-          </p>
-          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/dollyzoom-stacked.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-      <!--/ Visual Effects. -->
-
-      <!-- Matting. -->
-      <div class="column">
-        <h2 class="title is-3">Matting</h2>
-        <div class="columns is-centered">
-          <div class="column content">
-            <p>
-              As a byproduct of our method, we can also solve the matting problem by ignoring
-              samples that fall outside of a bounding box during rendering.
-            </p>
-            <video id="matting-video" controls playsinline height="100%">
-              <source src="./static/videos/matting.mp4"
-                      type="video/mp4">
-            </video>
+  <div class="container">
+      <h2 class="title is-2" style="text-align: center;">Background</h2>
+      <h2 class="title is-4" style="text-align: center;">Morphological Symmetry</h2>
+      <div class="columns is-centered has-text-centered">
+          <div class="column is-two-thirds">
+              <div class="content has-text-justified">
+                  <p>
+                    We will study the robot's morphological symmetry using the principles of group theory. We only focus on the reflection symmetry group, denoted as \( \mathbb{G}:=\mathbb{C}_2=\{e,g_s|g_s^2=e\} \).
+                    For any morphological configuration \( x \) of the quadrupedal robot, \( g_s \triangleright x\) gives the reflected configuration of \( x \) with respect to the sagittal plane.
+                    Such symmetric group action can be applied to the task MDP's state space, action space, and observation space similarly.
+                  </p>
+              </div>
           </div>
-
-        </div>
       </div>
-    </div>
-    <!--/ Matting. -->
-
-    <!-- Animation. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Animation</h2>
-
-        <!-- Interpolating. -->
-        <h3 class="title is-4">Interpolating states</h3>
-        <div class="content has-text-justified">
-          <p>
-            We can also animate the scene by interpolating the deformation latent codes of two input
-            frames. Use the slider here to linearly interpolate between the left frame and the right
-            frame.
-          </p>
-        </div>
-        <div class="columns is-vcentered interpolation-panel">
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_start.jpg"
-                 class="interpolation-image"
-                 alt="Interpolate start reference image."/>
-            <p>Start Frame</p>
+      <div class="columns is-centered">
+          <div class="column is-three-fifths is-centered has-text-centered">
+            <figure>
+              <img src="./static/videos/go1-C2-symmetries_anim_static.gif" alt="morphological symmetry" style="width: 70%;">
+              <figcaption>reflection symmetry, gif borrowed from <a href="https://github.com/Danfoa/MorphoSymm/blob/main/docs/static/animations/go1-C2-symmetries_anim_static.gif" target="_blank" rel="noopener noreferrer">MorphoSymm</a></figcaption>
+            </figure>            
           </div>
-          <div class="column interpolation-video-column">
-            <div id="interpolation-image-wrapper">
-              Loading...
-            </div>
-            <input class="slider is-fullwidth is-large is-info"
-                   id="interpolation-slider"
-                   step="1" min="0" max="100" value="0" type="range">
-          </div>
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_end.jpg"
-                 class="interpolation-image"
-                 alt="Interpolation end reference image."/>
-            <p class="is-bold">End Frame</p>
-          </div>
-        </div>
-        <br/>
-        <!--/ Interpolating. -->
-
-        <!-- Re-rendering. -->
-        <h3 class="title is-4">Re-rendering the input video</h3>
-        <div class="content has-text-justified">
-          <p>
-            Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
-            viewpoint such as a stabilized camera by playing back the training deformations.
-          </p>
-        </div>
-        <div class="content has-text-centered">
-          <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="75%">
-            <source src="./static/videos/replay.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <!--/ Re-rendering. -->
-
       </div>
-    </div>
-    <!--/ Animation. -->
-
-
-    <!-- Concurrent Work. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Related Links</h2>
-
-        <div class="content has-text-justified">
-          <p>
-            There's a lot of excellent work that was introduced around the same time as ours.
-          </p>
-          <p>
-            <a href="https://arxiv.org/abs/2104.09125">Progressive Encoding for Neural Optimization</a> introduces an idea similar to our windowed position encoding for coarse-to-fine optimization.
-          </p>
-          <p>
-            <a href="https://www.albertpumarola.com/research/D-NeRF/index.html">D-NeRF</a> and <a href="https://gvv.mpi-inf.mpg.de/projects/nonrigid_nerf/">NR-NeRF</a>
-            both use deformation fields to model non-rigid scenes.
-          </p>
-          <p>
-            Some works model videos with a NeRF by directly modulating the density, such as <a href="https://video-nerf.github.io/">Video-NeRF</a>, <a href="https://www.cs.cornell.edu/~zl548/NSFF/">NSFF</a>, and <a href="https://neural-3d-video.github.io/">DyNeRF</a>
-          </p>
-          <p>
-            There are probably many more by the time you are reading this. Check out <a href="https://dellaert.github.io/NeRF/">Frank Dellart's survey on recent NeRF papers</a>, and <a href="https://github.com/yenchenlin/awesome-NeRF">Yen-Chen Lin's curated list of NeRF papers</a>.
-          </p>
-        </div>
+      <h2 class="title is-4" style="text-align: center;">Equivariant / Invariant Functions</h2>
+      <div class="columns is-centered has-text-centered">
+          <div class="column is-two-thirds">
+              <div class="content has-text-justified">
+                  <p>
+                      A function \( f: \mathcal{X} \rightarrow \mathcal{Y} \) is <strong>equivariant</strong> with respect to a group action \( g \) if \( f(g \triangleright x) = g \triangleright f(x) \) for all \( x \in \mathcal{X} \).
+                      It is <strong>invariant</strong> if \( f(g \triangleright x) = f(x) \) for all \( x \in \mathcal{X} \).
+                  </p>
+              </div>
+          </div>
       </div>
-    </div>
-    <!--/ Concurrent Work. -->
 
+      <h2 class="title is-4" style="text-align: center;">Symmetric MDP</h2>
+      <div class="columns is-centered has-text-centered">
+          <div class="column is-two-thirds">
+              <div class="content has-text-justified">
+                  <p>
+                      We call an MDP \( (\mathcal{S}, \mathcal{A}, r, T, p_0) \) symmetric if there exists a group \( \mathbb{G} \) acting on the state space \( \mathcal{S} \) and action space \( \mathcal{A} \) such that the reward function \( r \), transition function \( T \) and the density of initial states \( p_0 \) are invariant with respect to the group action.
+                      \[ r(g_s \triangleright s, g_s \triangleright a) = r(s, a), \quad T(g_s \triangleright s, g_s \triangleright a, g_s \triangleright s') = T(s, a, s'), \quad p_0(g_s \triangleright s) = p_0(s) \]
+                  </p>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+
+<section class="section">
+  <div class="container">
+      <h2 class="title is-2" style="text-align: center;">Method</h2>
+      <div class="columns is-centered has-text-centered">
+          <div class="column is-two-thirds">
+              <div class="content has-text-justified">
+                  <p>
+                    <a href="https://www.cs.cmu.edu/~maz/publications/symmetry7.pdf" target="_blank" rel="noopener noreferrer">Previous study</a> has shown that symmetric MDPs possess \(\mathbb{G}\)-equivariant optimal
+                    control policies and \(\mathbb{G}\)-invariant value functions.
+                    \[ \pi(g_s \triangleright s) = g_s \triangleright \pi(s), \quad V(g_s \triangleright s) = V(s) \]
+                    We aim to leverage this property to guide the exploration in policy learning using two approaches.
+                  </p>
+              </div>
+          </div>
+      </div>
+
+      <h2 class="title is-4" style="text-align: center;">PPOaug</h2>
+      <div class="columns is-centered has-text-centered">
+          <div class="column is-two-thirds">
+              <div class="content has-text-justified">
+                  <p>
+                      <p><strong>PPOaug</strong>: PPO with data-augmentation.</p>
+                      For each online collected transition tuples \((s, a, r, s')\), we apply the group action \(g_s\) to \((s,a,s')\), and then add the augmented transition tuple \((g_s \triangleright s, g_s \triangleright a, r, g_s \triangleright s')\) to the replay buffer.
+                      The policy and value networks are trained both on the original and augmented transitions.
+                  </p>
+              </div>
+          </div>
+      </div>
+
+      <h2 class="title is-4" style="text-align: center;">PPOeqic</h2>
+      <div class="columns is-centered has-text-centered">
+          <div class="column is-two-thirds">
+              <div class="content has-text-justified">
+                  <p>
+                      <p><strong>PPOeqic</strong>: PPO with hard equivariance / invariance symmetry constraints on network architectures.</p>
+                      By using the repositories <a href="https://github.com/QUVA-Lab/escnn" target="_blank" rel="noopener noreferrer">escnn</a> and <a href="https://github.com/Danfoa/MorphoSymm" target="_blank" rel="noopener noreferrer">MorphoSymm</a>, 
+                      we enforce the policy network to be strictly equivariant and the value network to be strictly invariant to the group action \(g_s\).
+                  </p>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container">
+      <h2 class="title is-2" style="text-align: center;">Results</h2>
+      <div class="columns is-centered has-text-centered">
+          <div class="column is-two-thirds">
+              <div class="content has-text-justified">
+                  <p>
+                    
+                  </p>
+              </div>
+          </div>
+      </div>
+
+      <h2 class="title is-4" style="text-align: center;"></h2>
+      <div class="columns is-centered has-text-centered">
+          <div class="column is-two-thirds">
+              <div class="content has-text-justified">
+                  <p>
+                      
+                  </p>
+              </div>
+          </div>
+      </div>
+
+      <h2 class="title is-4" style="text-align: center;"></h2>
+      <div class="columns is-centered has-text-centered">
+          <div class="column is-two-thirds">
+              <div class="content has-text-justified">
+                  <p>
+                      
+                  </p>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+<section class="section"></section>
+  <div class="container">
+      <h2 class="title is-2" style="text-align: center;">Acknowledgements</h2>
+      <div class="columns is-centered has-text-centered">
+          <div class="column is-two-thirds">
+              <div class="content has-text-justified">
+                  <p>
+                    X. H., Z. L., Q. L., and K. S. acknowledge financial support from The AI Institute, 
+                    InnoHK of the Government of the Hong Kong Special Administrative Region via the Hong Kong Centre for Logistics Robotics. 
+                    G. T., M. P., and C. S. acknowledge financial support from PNRR MUR Project PE000013 "Future Artificial Intelligence Research", 
+                    funded by the European Union - NextGenerationEU. The authors thank Prof. Xue Bin Peng for insightful discussions on this work. 
+                    The authors also thank Xiaomi Inc. for providing CyberDog 2 for experiments. 
+                  </p>
+              </div>
+          </div>
+      </div>
   </div>
 </section>
 
@@ -444,11 +428,12 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{park2021nerfies,
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
+    <pre><code>@inproceedings{su2024leveraging,
+    title={Leveraging Symmetry in RL-based Legged Locomotion Control},
+    author={Su, Zhi and Huang, Xiaoyu and Ordoñez-Apraez, Daniel and Li, Yunfei and Li, Zhongyu and Liao, Qiayuan and Turrisi, Giulio and Pontil, Massimiliano and Semini, Claudio and Wu, Yi and Sreenath, Koushil},
+    booktitle={2024 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+    year={2024},
+    organization={IEEE}
 }</code></pre>
   </div>
 </section>
@@ -456,33 +441,9 @@
 
 <footer class="footer">
   <div class="container">
-    <div class="content has-text-centered">
-      <a class="icon-link"
-         href="./static/videos/nerfies_paper.pdf">
-        <i class="fas fa-file-pdf"></i>
-      </a>
-      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
-        <i class="fab fa-github"></i>
-      </a>
-    </div>
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-          <p>
-            This website is licensed under a <a rel="license"
-                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-          <p>
-            This means you are free to borrow the <a
-              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
-            we just ask that you link back to this page in the footer.
-            Please remember to remove the analytics code included in the header of the website which
-            you do not want on your website.
-          </p>
-        </div>
+      <div class="content has-text-centered">
+          <p>Page template borrowed from <a href="https://nerfies.github.io/"><span class="dnerf">Nerfies</span></a>.</p>
       </div>
-    </div>
   </div>
 </footer>
 
