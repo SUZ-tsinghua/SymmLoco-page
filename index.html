@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta name="description"
+  <!-- <meta name="description"
         content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
-  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+  <meta name="keywords" content="Nerfies, D-NeRF, NeRF"> -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Leveraging Symmetry in RL-based Legged Locomotion Control</title>
 
@@ -32,7 +32,7 @@
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/favicon.svg">
+  <link rel="icon" href="./static/images/favicon.png">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
@@ -68,7 +68,7 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Leveraging Symmetry in RL-based Legged Locomotion Control</h1>
+          <h1 class="title is-1 publication-title"><img src="./static/images/favicon.png" alt="System Introduction" style="width: 5%;">Leveraging Symmetry in RL-based Legged Locomotion Control</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="">Zhi Su</a><sup>*, 2</sup>,</span>
@@ -236,7 +236,7 @@
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-2">Abstract</h2>
+        <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
             Model-free reinforcement learning is a promising approach for autonomously solving challenging robotics control problems, 
@@ -259,7 +259,7 @@
     <!-- Paper video. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-2">Video</h2>
+        <h2 class="title is-3">Video</h2>
         <div class="publication-video">
           <iframe src="https://www.youtube.com/embed/Ad1clt4Yi4U"
                   frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
@@ -273,12 +273,13 @@
 
 <section class="section">
   <div class="container">
-      <h2 class="title is-2" style="text-align: center;">Background</h2>
-      <h2 class="title is-4" style="text-align: center;">Morphological Symmetry</h2>
+      <h2 class="title is-3" style="text-align: center;">Background</h2>
+      <!-- <h2 class="title is-4" style="text-align: center;">Morphological Symmetry</h2> -->
       <div class="columns is-centered has-text-centered">
           <div class="column is-two-thirds">
               <div class="content has-text-justified">
                   <p>
+                    <p><strong>Morphological Symmetry</strong></p>
                     We will study the robot's morphological symmetry using the principles of group theory. We only focus on the reflection symmetry group, denoted as \( \mathbb{G}:=\mathbb{C}_2=\{e,g_s|g_s^2=e\} \).
                     For any morphological configuration \( x \) of the quadrupedal robot, \( g_s \triangleright x\) gives the reflected configuration of \( x \) with respect to the sagittal plane.
                     Such symmetric group action can be applied to the task MDP's state space, action space, and observation space similarly.
@@ -294,11 +295,12 @@
             </figure>            
           </div>
       </div>
-      <h2 class="title is-4" style="text-align: center;">Equivariant / Invariant Functions</h2>
+      <!-- <h2 class="title is-4" style="text-align: center;">Equivariant / Invariant Functions</h2> -->
       <div class="columns is-centered has-text-centered">
           <div class="column is-two-thirds">
               <div class="content has-text-justified">
                   <p>
+                    <p><strong>Equivariant / Invariant Functions</strong></p>
                       A function \( f: \mathcal{X} \rightarrow \mathcal{Y} \) is <strong>equivariant</strong> with respect to a group action \( g \) if \( f(g \triangleright x) = g \triangleright f(x) \) for all \( x \in \mathcal{X} \).
                       It is <strong>invariant</strong> if \( f(g \triangleright x) = f(x) \) for all \( x \in \mathcal{X} \).
                   </p>
@@ -306,11 +308,12 @@
           </div>
       </div>
 
-      <h2 class="title is-4" style="text-align: center;">Symmetric MDP</h2>
+      <!-- <h2 class="title is-4" style="text-align: center;">Symmetric MDP</h2> -->
       <div class="columns is-centered has-text-centered">
           <div class="column is-two-thirds">
               <div class="content has-text-justified">
                   <p>
+                    <p><strong>Symmetric MDP</strong></p>
                       We call an MDP \( (\mathcal{S}, \mathcal{A}, r, T, p_0) \) symmetric if there exists a group \( \mathbb{G} \) acting on the state space \( \mathcal{S} \) and action space \( \mathcal{A} \) such that the reward function \( r \), transition function \( T \) and the density of initial states \( p_0 \) are invariant with respect to the group action.
                       \[ r(g_s \triangleright s, g_s \triangleright a) = r(s, a), \quad T(g_s \triangleright s, g_s \triangleright a, g_s \triangleright s') = T(s, a, s'), \quad p_0(g_s \triangleright s) = p_0(s) \]
                   </p>
@@ -324,7 +327,7 @@
 
 <section class="section">
   <div class="container">
-      <h2 class="title is-2" style="text-align: center;">Method</h2>
+      <h2 class="title is-3" style="text-align: center;">Method</h2>
       <div class="columns is-centered has-text-centered">
           <div class="column is-two-thirds">
               <div class="content has-text-justified">
@@ -338,7 +341,7 @@
           </div>
       </div>
 
-      <h2 class="title is-4" style="text-align: center;">PPOaug</h2>
+      <!-- <h2 class="title is-4" style="text-align: center;">PPOaug</h2> -->
       <div class="columns is-centered has-text-centered">
           <div class="column is-two-thirds">
               <div class="content has-text-justified">
@@ -351,7 +354,7 @@
           </div>
       </div>
 
-      <h2 class="title is-4" style="text-align: center;">PPOeqic</h2>
+      <!-- <h2 class="title is-4" style="text-align: center;">PPOeqic</h2> -->
       <div class="columns is-centered has-text-centered">
           <div class="column is-two-thirds">
               <div class="content has-text-justified">
@@ -369,45 +372,162 @@
 
 <section class="section">
   <div class="container">
-      <h2 class="title is-2" style="text-align: center;">Results</h2>
+      <h2 class="title is-3" style="text-align: center;">Experiments</h2>
       <div class="columns is-centered has-text-centered">
           <div class="column is-two-thirds">
               <div class="content has-text-justified">
                   <p>
-                    
+                    We compare PPOaug, PPOeqic, and a baseline PPO on four different tasks.
+                    <ul>
+                      <li><strong>Door Pushing</strong>: the quadrupedal robot needs to open a door using its front limbs while standing and adjust for doors that open either left or right.</li>
+                      <li><strong>Dribbling</strong>: the quadrupedal robot needs to dribble a ball at given speeds and directions.</li>
+                      <li><strong>Stand Turning</strong>: the quadrupedal robot needs to stand on its rear legs and turn around.</li>
+                      <li><strong>Slope Walking</strong>: the quadrupedal robot needs to traverse a slope on its rear legs.</li>
+                    </ul>
                   </p>
               </div>
           </div>
       </div>
 
-      <h2 class="title is-4" style="text-align: center;"></h2>
+      <div class="columns is-centered">
+        <div class="column is-three-fifths is-centered has-text-centered">
+          <figure>
+            <img src="./static/images/tasks.png" alt="tasks" style="width: 90%;">
+          </figure>            
+        </div>
+      </div>
+      
       <div class="columns is-centered has-text-centered">
           <div class="column is-two-thirds">
               <div class="content has-text-justified">
                   <p>
-                      
+                     <p><strong>Training Curves</strong></p>
+                      We compare the performance of the three methods in terms of sample efficiency and training return. The results indicate that PPOeqic consistently outperforms the other methods in sample efficiency and task performance.
                   </p>
               </div>
           </div>
       </div>
 
-      <h2 class="title is-4" style="text-align: center;"></h2>
+      <div class="columns is-centered">
+        <div class="column is-three-fifths is-centered has-text-centered">
+          <figure>
+            <img src="./static/images/curves.png" alt="tasks" style="width: 100%;">
+            <figcaption>Performance comparison of PPOaug, PPOeqic, and PPO on four tasks. From left to right: Door Pushing, Dribbling, Stand Turning, Slope Walking.</figcaption>
+          </figure>            
+        </div>
+      </div>
+
       <div class="columns is-centered has-text-centered">
-          <div class="column is-two-thirds">
-              <div class="content has-text-justified">
-                  <p>
-                      
-                  </p>
-              </div>
-          </div>
+        <div class="column is-two-thirds">
+            <div class="content has-text-justified">
+                <p>
+                    <p><strong>Door Pushing</strong></p>
+                    For the Door Pushing task, we calculate the success rate (SR) and the symmetric index (SI) of the learned policies. SI assesses the disparity between left and right scenarios, defined as \( \frac{2|X_R-X_L|}{X_R+X_L} \times 100\% \).
+                    Here, \( X \) is any scalar metric (e.g. SR). We also perform out of distribution (OOD) evaluation by randomizing the robot's initial states.
+                     The results show that PPOeqic achieves the highest SR and the lowest SI in both normal and OOD scenarios, indicating that the learned policy is more robust and symmetric.
+                </p>
+            </div>
+        </div>
+      </div>
+
+      <div class="columns is-centered">
+        <div class="column is-three-fifths is-centered has-text-centered">
+          <figure>
+            <img src="./static/images/door_pushing.png" alt="tasks" style="width: 100%;">
+            <figcaption>Results on the Door Pushing task</figcaption>
+          </figure>            
+        </div>
+      </div>
+
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-two-thirds">
+            <div class="content has-text-justified">
+                <p>
+                    <p><strong>Dribbling</strong></p>
+                    Incorporating symmetry in Dribbling task also results in better performance.
+                    Qualitatively, PPOeqic and PPOaug keep the ball closer to the robot, while PPO often kicks it away and chases it. Quantitatively, the hard-constraint PPOeqic achieves an average
+                    episodic return of 431.86 \( \pm \) 1.77, slightly outperforming PPO (427.02 \( \pm \) 2.15) and PPOaug (430.49 \( \pm \) 3.45), suggesting all methods are near saturation in the simulation environment.
+                </p>
+            </div>
+        </div>
+      </div>
+
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-two-thirds">
+            <div class="content has-text-justified">
+                <p>
+                    <p><strong>Stand Turning</strong></p>
+                    <p>Besides loco-manipulation, we examine how symmetry helps if the task involves bipedal locomotion only.</p>
+                    <p>Qualitatively, the PPO policy repeatedly develops a staggered gait with one foot positioned ahead of the other to maintain balance.
+                    This gait results in significant jittering and hinders symmetric behaviors between left and right turns. In contrast, symmetry-incorporated
+                    policies exhibit both symmetric gaits and more importantly symmetric turning trajectories in the task level.</p>
+                    <p>Quantitatively, to measure the optimality of the policies, we gauge the error between the robot's commanded and actual headings. Additionally, we include the Cost of Transport (CoT) to evaluate the energy efficiency of the controller.
+                    The results show that PPOeqic achieves the lowest heading error and CoT, indicating that the learned policy is more optimal and energy-efficient.</p>
+                </p>
+            </div>
+        </div>
+      </div>
+
+      <div class="columns is-centered">
+        <div class="column is-three-fifths is-centered has-text-centered">
+          <figure>
+            <img src="./static/images/stand_turning.png" alt="tasks" style="width: 100%;">
+            <figcaption>Results on the Stand Turning task</figcaption>
+          </figure>            
+        </div>
+      </div>
+
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-two-thirds">
+            <div class="content has-text-justified">
+                <p>
+                    <p><strong>Slope Walking</strong></p>
+                    <p>In this task, PPO shows significant issues with learning a symmetric foot placement, resulting in backward steps and frequent balance loss. 
+                    This unregulated gait pattern leads to significant decrement in velocity tracking performance, where the policy walks only half as far as PPOeqic in the same timeframe.</p>
+                    <p>The PPOaug policy improves upon PPO's limitations, exhibiting better alternation between the leading foot and more regulated foot placement.
+                      However, the variations in step size and occasional staggering of one leg still indicate room for improvement.</p>
+                    <p>On the other hand, PPOeqic presents the most stable gait. It maintains consistent foot exchange, regulated contact sequences, and similar step sizes.</p>
+                </p>
+            </div>
+        </div>
+      </div>
+
+      <div class="columns is-centered">
+        <div class="column is-three-fifths is-centered has-text-centered">
+          <figure>
+            <img src="./static/images/slope_walking.png" alt="tasks" style="width: 100%;">
+            <figcaption>Plots of the feet positions in the desired walk direction</figcaption>
+          </figure>            
+        </div>
+      </div>
+
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-two-thirds">
+            <div class="content has-text-justified">
+                <p>
+                    <p><strong>Real World Experiments</strong></p>
+                    <p>We deploy the learned policies of Door Pushing and Stand Turning tasks on the real-world quadrupedal robot CyberDog 2.
+                      The results show that symmetry-incorporated policies PPOaug and PPOeqic can be deployed zero-shot to hardware and exhibit robust and symmetric behaviors in the real world.</p>
+                </p>
+            </div>
+        </div>
+      </div>
+
+      <div class="columns is-centered">
+        <div class="column is-three-fifths is-centered has-text-centered">
+          <figure>
+            <img src="./static/images/real_world.png" alt="tasks" style="width: 100%;">
+            <figcaption>Snapshots of symmetry-enforced policies deployed zero-shot to perform real-world tasks of Door Pushing and Stand Turning</figcaption>
+          </figure>            
+        </div>
       </div>
   </div>
 </section>
 
 
-<section class="section"></section>
+<section class="section">
   <div class="container">
-      <h2 class="title is-2" style="text-align: center;">Acknowledgements</h2>
+      <h2 class="title is-3" style="text-align: center;">Acknowledgements</h2>
       <div class="columns is-centered has-text-centered">
           <div class="column is-two-thirds">
               <div class="content has-text-justified">
