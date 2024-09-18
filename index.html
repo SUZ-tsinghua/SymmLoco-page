@@ -135,7 +135,7 @@
               </span>
               <!-- Code Link. -->
               <span class="link-block">
-                <a href=""
+                <a href="https://github.com/SUZ-tsinghua/SymmLoco"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -271,9 +271,178 @@
 </section>
 
 
+
+
 <section class="section">
   <div class="container">
-      <h2 class="title is-3" style="text-align: center;">Background</h2>
+      <h2 class="title is-3" style="text-align: center;">Results</h2>
+      <div class="columns is-centered has-text-centered">
+          <div class="column is-two-thirds">
+              <div class="content has-text-justified">
+                  <p>
+                    We compare PPOaug, PPOeqic, and a baseline PPO on four different tasks.
+                    <!-- <ul>
+                      <li><strong>Door Pushing</strong>: the quadrupedal robot needs to open a door using its front limbs while standing and adjust for doors that open either left or right.</li>
+                      <li><strong>Dribbling</strong>: the quadrupedal robot needs to dribble a ball at given speeds and directions.</li>
+                      <li><strong>Stand Turning</strong>: the quadrupedal robot needs to stand on its rear legs and turn around.</li>
+                      <li><strong>Slope Walking</strong>: the quadrupedal robot needs to traverse a slope on its rear legs.</li>
+                    </ul> -->
+                  </p>
+              </div>
+          </div>
+      </div>
+
+      <div class="columns is-centered">
+        <div class="column is-three-fifths is-centered has-text-centered">
+          <figure>
+            <img src="./static/images/tasks.png" alt="tasks" style="width: 90%;">
+          </figure>            
+        </div>
+      </div>
+      
+      <div class="columns is-centered has-text-centered">
+          <div class="column is-two-thirds">
+              <div class="content has-text-justified">
+                  <p>
+                     <p><strong>Training Curves</strong></p>
+                      <!-- We compare the performance of the three methods in terms of sample efficiency and training return. The results indicate that PPOeqic consistently outperforms the other methods in sample efficiency and task performance. -->
+                  </p>
+              </div>
+          </div>
+      </div>
+
+      <div class="columns is-centered">
+        <div class="column is-three-fifths is-centered has-text-centered">
+          <figure>
+            <img src="./static/images/curves.png" alt="tasks" style="width: 100%;">
+            <figcaption>Comparison of training curves of PPO, PPOaug, and PPOeqic on four tasks from left to right: <strong>Door Pushing</strong>, <strong>Dribbling</strong>, <strong>Stand Turning</strong>
+              , and <strong>Slope Walking</strong>. Learning curves show mean episodic return and standard deviation for three seeds. PPOeqic consistently
+              demonstrates the highest training returns and sample efficiency in all tasks.</figcaption>
+          </figure>            
+        </div>
+      </div>
+
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-two-thirds">
+            <div class="content has-text-justified">
+                <p>
+                    <p><strong>Door Pushing</strong></p>
+                    <!-- For the Door Pushing task, we calculate the success rate (SR) and the symmetric index (SI) of the learned policies. SI assesses the disparity between left and right scenarios, defined as \( \frac{2|X_R-X_L|}{X_R+X_L} \times 100\% \).
+                    Here, \( X \) is any scalar metric (e.g. SR). We also perform out of distribution (OOD) evaluation by randomizing the robot's initial states.
+                     The results show that PPOeqic achieves the highest SR and the lowest SI in both normal and OOD scenarios, indicating that the learned policy is more robust and symmetric. -->
+                </p>
+            </div>
+        </div>
+      </div>
+
+      <div class="columns is-centered">
+        <div class="column is-three-fifths is-centered has-text-centered">
+          <figure>
+            <img src="./static/images/door_pushing.png" alt="tasks" style="width: 100%;">
+            <figcaption>Comparison of success rates (SR) and their symmetry index on <strong>Door Pushing</strong> tasks on training-distribution and out-of-distribution
+              scenarios. Of the three variants, PPOeqic demonstrates both higher success rate and better symmetry index in both cases, indicating a
+              better task-level symmetric policy</figcaption>
+          </figure>            
+        </div>
+      </div>
+
+      <!-- <div class="columns is-centered has-text-centered">
+        <div class="column is-two-thirds">
+            <div class="content has-text-justified">
+                <p>
+                    <p><strong>Dribbling</strong></p>
+                    Incorporating symmetry in Dribbling task also results in better performance.
+                    Qualitatively, PPOeqic and PPOaug keep the ball closer to the robot, while PPO often kicks it away and chases it. Quantitatively, the hard-constraint PPOeqic achieves an average
+                    episodic return of 431.86 \( \pm \) 1.77, slightly outperforming PPO (427.02 \( \pm \) 2.15) and PPOaug (430.49 \( \pm \) 3.45), suggesting all methods are near saturation in the simulation environment.
+                </p>
+            </div>
+        </div>
+      </div> -->
+
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-two-thirds">
+            <div class="content has-text-justified">
+                <p>
+                    <p><strong>Stand Turning</strong></p>
+                    <!-- <p>Besides loco-manipulation, we examine how symmetry helps if the task involves bipedal locomotion only.</p>
+                    <p>Qualitatively, the PPO policy repeatedly develops a staggered gait with one foot positioned ahead of the other to maintain balance.
+                    This gait results in significant jittering and hinders symmetric behaviors between left and right turns. In contrast, symmetry-incorporated
+                    policies exhibit both symmetric gaits and more importantly symmetric turning trajectories in the task level.</p>
+                    <p>Quantitatively, to measure the optimality of the policies, we gauge the error between the robot's commanded and actual headings. Additionally, we include the Cost of Transport (CoT) to evaluate the energy efficiency of the controller.
+                    The results show that PPOeqic achieves the lowest heading error and CoT, indicating that the learned policy is more optimal and energy-efficient.</p> -->
+                </p>
+            </div>
+        </div>
+      </div>
+
+      <div class="columns is-centered">
+        <div class="column is-three-fifths is-centered has-text-centered">
+          <figure>
+            <img src="./static/images/stand_turning.png" alt="tasks" style="width: 100%;">
+            <figcaption>Comparison of command tracking error on <strong>Stand Turning</strong> task, Cost of
+              Transport and their symmetry index on stand turning tasks for
+              three PPO variants. PPOeqic demonstrates less error and energy
+              consumption, indicating a more optimal policy</figcaption>
+          </figure>            
+        </div>
+      </div>
+
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-two-thirds">
+            <div class="content has-text-justified">
+                <p>
+                    <p><strong>Slope Walking</strong></p>
+                    <!-- <p>In this task, PPO shows significant issues with learning a symmetric foot placement, resulting in backward steps and frequent balance loss. 
+                    This unregulated gait pattern leads to significant decrement in velocity tracking performance, where the policy walks only half as far as PPOeqic in the same timeframe.</p>
+                    <p>The PPOaug policy improves upon PPO's limitations, exhibiting better alternation between the leading foot and more regulated foot placement.
+                      However, the variations in step size and occasional staggering of one leg still indicate room for improvement.</p>
+                    <p>On the other hand, PPOeqic presents the most stable gait. It maintains consistent foot exchange, regulated contact sequences, and similar step sizes.</p> -->
+                </p>
+            </div>
+        </div>
+      </div>
+
+      <div class="columns is-centered">
+        <div class="column is-three-fifths is-centered has-text-centered">
+          <figure>
+            <img src="./static/images/slope_walking.png" alt="tasks" style="width: 100%;">
+            <figcaption>Plots of the feet positions in the desired walk direction.
+              We observe that vanilla PPO learns an unstable step pattern with
+              backward steps and foot slipping, resulting in 50% slower walking
+              speed. PPOaug improves drastically but asymmetric patterns such
+              as foot dragging still exists. PPOeqic presents the most symmetric
+              interweaving gait pattern and walks at the desired speed.</figcaption>
+          </figure>            
+        </div>
+      </div>
+
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-two-thirds">
+            <div class="content has-text-justified">
+                <p>
+                    <p><strong>Real World Experiments</strong></p>
+                    <p>We deploy the learned policies of Stand Turning tasks on the real-world quadrupedal robot CyberDog 2. The policy trained by PPOaug shows incredible robustness.
+                      </p>
+                </p>
+            </div>
+        </div>
+      </div>
+
+      <div class="columns is-centered">
+        <div class="column is-three-fifths is-centered has-text-centered">
+          <div class="publication-video">
+            <iframe src="https://www.youtube.com/embed/a1rbdB16Zkk"
+                    frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>          
+        </div>
+      </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container">
+      <h2 class="title is-3" style="text-align: center;">Background & Method</h2>
       <!-- <h2 class="title is-4" style="text-align: center;">Morphological Symmetry</h2> -->
       <div class="columns is-centered has-text-centered">
           <div class="column is-two-thirds">
@@ -320,207 +489,46 @@
               </div>
           </div>
       </div>
-  </div>
-</section>
 
-
-
-<section class="section">
-  <div class="container">
-      <h2 class="title is-3" style="text-align: center;">Method</h2>
-      <div class="columns is-centered has-text-centered">
-          <div class="column is-two-thirds">
-              <div class="content has-text-justified">
-                  <p>
-                    <a href="https://www.cs.cmu.edu/~maz/publications/symmetry7.pdf" target="_blank" rel="noopener noreferrer">Previous study</a> has shown that symmetric MDPs possess \(\mathbb{G}\)-equivariant optimal
-                    control policies and \(\mathbb{G}\)-invariant value functions.
-                    \[ \pi(g_s \triangleright s) = g_s \triangleright \pi(s), \quad V(g_s \triangleright s) = V(s) \]
-                    We aim to leverage this property to guide the exploration in policy learning using two approaches.
-                  </p>
-              </div>
-          </div>
-      </div>
-
-      <!-- <h2 class="title is-4" style="text-align: center;">PPOaug</h2> -->
-      <div class="columns is-centered has-text-centered">
-          <div class="column is-two-thirds">
-              <div class="content has-text-justified">
-                  <p>
-                      <p><strong>PPOaug</strong>: PPO with data-augmentation.</p>
-                      For each online collected transition tuples \((s, a, r, s')\), we apply the group action \(g_s\) to \((s,a,s')\), and then add the augmented transition tuple \((g_s \triangleright s, g_s \triangleright a, r, g_s \triangleright s')\) to the replay buffer.
-                      The policy and value networks are trained both on the original and augmented transitions.
-                  </p>
-              </div>
-          </div>
-      </div>
-
-      <!-- <h2 class="title is-4" style="text-align: center;">PPOeqic</h2> -->
-      <div class="columns is-centered has-text-centered">
-          <div class="column is-two-thirds">
-              <div class="content has-text-justified">
-                  <p>
-                      <p><strong>PPOeqic</strong>: PPO with hard equivariance / invariance symmetry constraints on network architectures.</p>
-                      By using the repositories <a href="https://github.com/QUVA-Lab/escnn" target="_blank" rel="noopener noreferrer">escnn</a> and <a href="https://github.com/Danfoa/MorphoSymm" target="_blank" rel="noopener noreferrer">MorphoSymm</a>, 
-                      we enforce the policy network to be strictly equivariant and the value network to be strictly invariant to the group action \(g_s\).
-                  </p>
-              </div>
-          </div>
-      </div>
-  </div>
-</section>
-
-
-<section class="section">
-  <div class="container">
-      <h2 class="title is-3" style="text-align: center;">Experiments</h2>
-      <div class="columns is-centered has-text-centered">
-          <div class="column is-two-thirds">
-              <div class="content has-text-justified">
-                  <p>
-                    We compare PPOaug, PPOeqic, and a baseline PPO on four different tasks.
-                    <ul>
-                      <li><strong>Door Pushing</strong>: the quadrupedal robot needs to open a door using its front limbs while standing and adjust for doors that open either left or right.</li>
-                      <li><strong>Dribbling</strong>: the quadrupedal robot needs to dribble a ball at given speeds and directions.</li>
-                      <li><strong>Stand Turning</strong>: the quadrupedal robot needs to stand on its rear legs and turn around.</li>
-                      <li><strong>Slope Walking</strong>: the quadrupedal robot needs to traverse a slope on its rear legs.</li>
-                    </ul>
-                  </p>
-              </div>
-          </div>
-      </div>
-
-      <div class="columns is-centered">
-        <div class="column is-three-fifths is-centered has-text-centered">
-          <figure>
-            <img src="./static/images/tasks.png" alt="tasks" style="width: 90%;">
-          </figure>            
-        </div>
-      </div>
-      
-      <div class="columns is-centered has-text-centered">
-          <div class="column is-two-thirds">
-              <div class="content has-text-justified">
-                  <p>
-                     <p><strong>Training Curves</strong></p>
-                      We compare the performance of the three methods in terms of sample efficiency and training return. The results indicate that PPOeqic consistently outperforms the other methods in sample efficiency and task performance.
-                  </p>
-              </div>
-          </div>
-      </div>
-
-      <div class="columns is-centered">
-        <div class="column is-three-fifths is-centered has-text-centered">
-          <figure>
-            <img src="./static/images/curves.png" alt="tasks" style="width: 100%;">
-            <figcaption>Performance comparison of PPOaug, PPOeqic, and PPO on four tasks. From left to right: Door Pushing, Dribbling, Stand Turning, Slope Walking.</figcaption>
-          </figure>            
-        </div>
-      </div>
 
       <div class="columns is-centered has-text-centered">
         <div class="column is-two-thirds">
             <div class="content has-text-justified">
                 <p>
-                    <p><strong>Door Pushing</strong></p>
-                    For the Door Pushing task, we calculate the success rate (SR) and the symmetric index (SI) of the learned policies. SI assesses the disparity between left and right scenarios, defined as \( \frac{2|X_R-X_L|}{X_R+X_L} \times 100\% \).
-                    Here, \( X \) is any scalar metric (e.g. SR). We also perform out of distribution (OOD) evaluation by randomizing the robot's initial states.
-                     The results show that PPOeqic achieves the highest SR and the lowest SI in both normal and OOD scenarios, indicating that the learned policy is more robust and symmetric.
+                  <a href="https://www.cs.cmu.edu/~maz/publications/symmetry7.pdf" target="_blank" rel="noopener noreferrer">Previous study</a> has shown that symmetric MDPs possess \(\mathbb{G}\)-equivariant optimal
+                  control policies and \(\mathbb{G}\)-invariant value functions.
+                  \[ \pi(g_s \triangleright s) = g_s \triangleright \pi(s), \quad V(g_s \triangleright s) = V(s) \]
+                  We aim to leverage this property to guide the exploration in policy learning using two approaches.
                 </p>
             </div>
         </div>
-      </div>
+    </div>
 
-      <div class="columns is-centered">
-        <div class="column is-three-fifths is-centered has-text-centered">
-          <figure>
-            <img src="./static/images/door_pushing.png" alt="tasks" style="width: 100%;">
-            <figcaption>Results on the Door Pushing task</figcaption>
-          </figure>            
-        </div>
-      </div>
-
-      <div class="columns is-centered has-text-centered">
+    <!-- <h2 class="title is-4" style="text-align: center;">PPOaug</h2> -->
+    <div class="columns is-centered has-text-centered">
         <div class="column is-two-thirds">
             <div class="content has-text-justified">
                 <p>
-                    <p><strong>Dribbling</strong></p>
-                    Incorporating symmetry in Dribbling task also results in better performance.
-                    Qualitatively, PPOeqic and PPOaug keep the ball closer to the robot, while PPO often kicks it away and chases it. Quantitatively, the hard-constraint PPOeqic achieves an average
-                    episodic return of 431.86 \( \pm \) 1.77, slightly outperforming PPO (427.02 \( \pm \) 2.15) and PPOaug (430.49 \( \pm \) 3.45), suggesting all methods are near saturation in the simulation environment.
+                    <p><strong>PPOaug</strong>: PPO with data-augmentation.</p>
+                    For each online collected transition tuples \((s, a, r, s')\), we apply the group action \(g_s\) to \((s,a,s')\), and then add the augmented transition tuple \((g_s \triangleright s, g_s \triangleright a, r, g_s \triangleright s')\) to the replay buffer.
+                    The policy and value networks are trained both on the original and augmented transitions.
                 </p>
             </div>
         </div>
-      </div>
+    </div>
 
-      <div class="columns is-centered has-text-centered">
+    <!-- <h2 class="title is-4" style="text-align: center;">PPOeqic</h2> -->
+    <div class="columns is-centered has-text-centered">
         <div class="column is-two-thirds">
             <div class="content has-text-justified">
                 <p>
-                    <p><strong>Stand Turning</strong></p>
-                    <p>Besides loco-manipulation, we examine how symmetry helps if the task involves bipedal locomotion only.</p>
-                    <p>Qualitatively, the PPO policy repeatedly develops a staggered gait with one foot positioned ahead of the other to maintain balance.
-                    This gait results in significant jittering and hinders symmetric behaviors between left and right turns. In contrast, symmetry-incorporated
-                    policies exhibit both symmetric gaits and more importantly symmetric turning trajectories in the task level.</p>
-                    <p>Quantitatively, to measure the optimality of the policies, we gauge the error between the robot's commanded and actual headings. Additionally, we include the Cost of Transport (CoT) to evaluate the energy efficiency of the controller.
-                    The results show that PPOeqic achieves the lowest heading error and CoT, indicating that the learned policy is more optimal and energy-efficient.</p>
+                    <p><strong>PPOeqic</strong>: PPO with hard equivariance / invariance symmetry constraints on network architectures.</p>
+                    By using the repositories <a href="https://github.com/QUVA-Lab/escnn" target="_blank" rel="noopener noreferrer">escnn</a> and <a href="https://github.com/Danfoa/MorphoSymm" target="_blank" rel="noopener noreferrer">MorphoSymm</a>, 
+                    we enforce the policy network to be strictly equivariant and the value network to be strictly invariant to the group action \(g_s\).
                 </p>
             </div>
         </div>
-      </div>
-
-      <div class="columns is-centered">
-        <div class="column is-three-fifths is-centered has-text-centered">
-          <figure>
-            <img src="./static/images/stand_turning.png" alt="tasks" style="width: 100%;">
-            <figcaption>Results on the Stand Turning task</figcaption>
-          </figure>            
-        </div>
-      </div>
-
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-two-thirds">
-            <div class="content has-text-justified">
-                <p>
-                    <p><strong>Slope Walking</strong></p>
-                    <p>In this task, PPO shows significant issues with learning a symmetric foot placement, resulting in backward steps and frequent balance loss. 
-                    This unregulated gait pattern leads to significant decrement in velocity tracking performance, where the policy walks only half as far as PPOeqic in the same timeframe.</p>
-                    <p>The PPOaug policy improves upon PPO's limitations, exhibiting better alternation between the leading foot and more regulated foot placement.
-                      However, the variations in step size and occasional staggering of one leg still indicate room for improvement.</p>
-                    <p>On the other hand, PPOeqic presents the most stable gait. It maintains consistent foot exchange, regulated contact sequences, and similar step sizes.</p>
-                </p>
-            </div>
-        </div>
-      </div>
-
-      <div class="columns is-centered">
-        <div class="column is-three-fifths is-centered has-text-centered">
-          <figure>
-            <img src="./static/images/slope_walking.png" alt="tasks" style="width: 100%;">
-            <figcaption>Plots of the feet positions in the desired walk direction</figcaption>
-          </figure>            
-        </div>
-      </div>
-
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-two-thirds">
-            <div class="content has-text-justified">
-                <p>
-                    <p><strong>Real World Experiments</strong></p>
-                    <p>We deploy the learned policies of Door Pushing and Stand Turning tasks on the real-world quadrupedal robot CyberDog 2.
-                      The results show that symmetry-incorporated policies PPOaug and PPOeqic can be deployed zero-shot to hardware and exhibit robust and symmetric behaviors in the real world.</p>
-                </p>
-            </div>
-        </div>
-      </div>
-
-      <div class="columns is-centered">
-        <div class="column is-three-fifths is-centered has-text-centered">
-          <figure>
-            <img src="./static/images/real_world.png" alt="tasks" style="width: 100%;">
-            <figcaption>Snapshots of symmetry-enforced policies deployed zero-shot to perform real-world tasks of Door Pushing and Stand Turning</figcaption>
-          </figure>            
-        </div>
-      </div>
+    </div>
   </div>
 </section>
 
